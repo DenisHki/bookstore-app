@@ -12,20 +12,22 @@
 	<table>
 		<tr>
 			<th>Title</th>
-			<th>Author</th>	
-			<th>Year</th>	
-			<th>ISBN</th>	
+			<th>Author</th>
+			<th>Year</th>
+			<th>ISBN</th>
 			<th>Price</th>
 		</tr>
 		<tr th:each="book : ${books}">
-			<td th:text="${book.title}">Title...</td>
-			<td th:text="${book.author}">Author...</td>
-			<td th:text="${book.publicationYear}">Year...</td>
-			<td th:text="${book.isbn}">ISBN...</td>
-			<td th:text="${book.price}">Price...</td>
+			<td th:text="${book.title}">Title</td>
+			<td th:text="${book.author}">Author</td>
+			<td th:text="${book.publicationYear}">Publication Year</td>
+			<td th:text="${book.isbn}">ISBN</td>
+			<td th:text="${book.price}">Price</td>
+			<td><a th:href="@{/delete/{id}(id=${book.id})}">Delete</a></td>
+			
 		</tr>
 	</table>
-
+	<a href="/add" class="btn btn-primary">Add Book</a>
 </body>
 
 </html>
