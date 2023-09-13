@@ -1,34 +1,21 @@
 package com.chuvakov.bookstore.web;
 
-
-
-import java.util.ArrayList;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.chuvakov.bookstore.domen.Book;
+import com.chuvakov.bookstore.domain.BookRepository;
 
 @Controller
 public class BookController {
+	@Autowired
+	private BookRepository repository;
 
-	@RequestMapping(value= {"/", "/booklist"})
-	public String index(Model model) {
-	
-		ArrayList<Book> books = new ArrayList<Book>();
-		
-		Book book1 = new Book("The Lord of the Rings", "John Ronald Reuel Tolkien", 1954, "0-684-84328-5", 50.70);
-		Book book2 = new Book("A Game of Thrones", "George R. R. Martin", 1996, "85-359-0277-5", 30.50);
-		Book book3 = new Book("The Da Vinci Code", "Dan Brown", 2003, "	0-385-50420-9", 15.80);
-		
-		books.add(book1);
-		books.add(book2);
-		books.add(book3);
-		
-		model.addAttribute("booklist", books);
-		
+	@RequestMapping(value = { "/", "/booklist" })
+	public String booklist(Model model) {
+		model.addAttribute("books", repository.findAll());
 		return "booklist";
-		
+
 	}
 }
