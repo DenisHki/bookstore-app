@@ -1,19 +1,21 @@
 package com.chuvakov.bookstore.web;
 
+
+
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.chuvakov.bookstore.domen.Book;
 
 @Controller
 public class BookController {
 
-	@GetMapping("/index")
+	@RequestMapping(value= {"/", "/booklist"})
 	public String index(Model model) {
-		
+	
 		ArrayList<Book> books = new ArrayList<Book>();
 		
 		Book book1 = new Book("The Lord of the Rings", "John Ronald Reuel Tolkien", 1954, "0-684-84328-5", 50.70);
@@ -26,6 +28,7 @@ public class BookController {
 		
 		model.addAttribute("booklist", books);
 		
-		return "hello";
+		return "booklist";
+		
 	}
 }

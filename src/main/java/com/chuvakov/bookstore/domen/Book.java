@@ -1,15 +1,22 @@
 package com.chuvakov.bookstore.domen;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Book {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 	private String title;
 	private String author;
 	private int publicationYear;
 	private String isbn;
 	private double price;
 
-	public Book() {
-		super();
-	}
+	public Book() {}
 
 	public Book(String title, String author, int publicationYear, String isbn, double price) {
 		super();
@@ -18,6 +25,14 @@ public class Book {
 		this.publicationYear = publicationYear;
 		this.isbn = isbn;
 		this.price = price;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getTitle() {
@@ -58,6 +73,12 @@ public class Book {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", publicationYear=" + publicationYear
+				+ ", isbn=" + isbn + ", price=" + price + "]";
 	}
 
 }
