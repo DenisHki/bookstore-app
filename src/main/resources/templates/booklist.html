@@ -2,20 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Server Programming</title>
+	<title>Book List</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
 
-	<h1>List of Books:</h1>
+	<h1>Books:</h1>
 	<table>
-		<tr th:each="onebook : ${booklist}">
-			<td th:text="${onebook.title}">Title...</td>
-			<td th:text="${onebook.author}">Author...</td>
-			<td th:text="${onebook.publicationYear}">Year...</td>
-			<td th:text="${onebook.isbn}">ISBN...</td>
-			<td th:text="${onebook.price}">Price...</td>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>	
+			<th>Year</th>	
+			<th>ISBN</th>	
+			<th>Price</th>
+		</tr>
+		<tr th:each="book : ${books}">
+			<td th:text="${book.title}">Title...</td>
+			<td th:text="${book.author}">Author...</td>
+			<td th:text="${book.publicationYear}">Year...</td>
+			<td th:text="${book.isbn}">ISBN...</td>
+			<td th:text="${book.price}">Price...</td>
 		</tr>
 	</table>
 

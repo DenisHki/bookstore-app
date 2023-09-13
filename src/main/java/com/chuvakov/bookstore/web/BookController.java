@@ -12,10 +12,10 @@ public class BookController {
 	@Autowired
 	private BookRepository repository;
 
+	// Get all the books
 	@RequestMapping(value = { "/", "/booklist" })
 	public String booklist(Model model) {
 		model.addAttribute("books", repository.findAll());
 		return "booklist";
-
 	}
 }
