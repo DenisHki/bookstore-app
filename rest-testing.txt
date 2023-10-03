@@ -1,3 +1,5 @@
 curl http://localhost:8080/api/books
 curl http://localhost:8080/api/categories
-Invoke-RestMethod -Uri http://localhost:8080/api/books/1 -Method Delete
+curl -X DELETE http://localhost:8080/api/books/2
+curl -H "Content-Type: application/json" -X POST -d '{"title":"Some title","author":"New Author","publicationYear":2023,"isbn":"123-45-678","price":50.0,"category":{"categoryid":1,"name":"Fantasy"}}' http://localhost:8080/api/books
+curl -X PUT http://localhost:8080/api/books/4 -H 'Content-type:application/json' -d '{"title":"New title","author":"Author updated","publicationYear":2023,"isbn":"123-45-678","price":100.0,"category":{"categoryid":2,"name":"Fiction"}}'
