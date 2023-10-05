@@ -47,8 +47,11 @@ public class BookstoreApplication {
 			AppUser user1 = new AppUser("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "user1@gmail.com", "USER");
 			AppUser user2 = new AppUser("admin", "$2a$10$0MMwY.IQqpsVc1jC8u7IJ.2rT8b0Cd3b3sfIBGV2zfgnPGtT4r0.C", "user2@gmail.com", "ADMIN");
 			
+			AppUser user3 = new AppUser("denis", "$2a$12$1WYlKdp8JMM9B.cHiMsyi.uw7xpGmaPkwChPK3EluX9GOs0Bxt./.", "denchuv@gmail.com", "ADMIN");
+			
 			urepository.save(user1);
 			urepository.save(user2);
+			urepository.save(user3);
 			
 			log.info("fetch all books");
 			for (Book book : repository.findAll()) {
