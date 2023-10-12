@@ -1,0 +1,77 @@
+[33mcommit 4c1bbbea6f6e7e4f57fe785f06478aed1f8ec52f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Thu Oct 5 03:49:47 2023 +0300
+
+    Tests
+
+[33mcommit d9bbefc1c424efc8a7cbd932fd235e64b4580edc[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Thu Oct 5 01:57:34 2023 +0300
+
+    Securing the web application
+
+[33mcommit aab9ecb7b36382b3e8379b3e40b32ce9c0da3d80[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Tue Oct 3 15:11:29 2023 +0300
+
+    new commit
+
+[33mcommit 8995259577b7b719f536249180c5de7b029ac385[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Thu Sep 28 03:01:25 2023 +0300
+
+    Test
+
+[33mcommit a4d3837430751d86d5dc6151d0adf703e9567ca4[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Thu Sep 28 02:05:19 2023 +0300
+
+    Added REST servise
+
+[33mcommit 1cf68d9ef004cf4eea0b4c981f79c177e7d4f1ec[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Wed Sep 20 18:15:22 2023 +0300
+
+    One-to-many
+
+[33mcommit 1d57ee459cc521d1cf40783d0c69a6abfbd7533e[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Wed Sep 13 19:39:04 2023 +0300
+
+    Added Bootstrap
+
+[33mcommit 5deb0f59cdfd4a8b79dd839fae43b68623ec719b[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Wed Sep 13 18:38:52 2023 +0300
+
+    Implemented Edit book functionality
+
+[33mcommit 43826aa04bd7bb7ee477c39f0ebf28b63ccc89c0[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Wed Sep 13 17:50:01 2023 +0300
+
+    Implemented add and delete functionality
+
+[33mcommit 1e21879d9a50405e9508215ee683c3375cbd4c83[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Wed Sep 13 16:36:28 2023 +0300
+
+    Bookstore: Listpage completed
+
+[33mcommit 9ac40a444692764e989738c1222602034fa3e804[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Wed Sep 13 16:11:56 2023 +0300
+
+    Add JPA and database completed
+
+[33mcommit 14e195b0d61bfcbdf8b73febde9a5695ad264add[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Wed Sep 13 15:14:38 2023 +0300
+
+    Add JPA and database
+
+[33mcommit 75351b74836fcc68db702e59500fd0bdf17cd952[m
+Author: Denis Chuvakov <ds.chuvakov@gmail.com>
+Date:   Wed Sep 6 23:04:15 2023 +0300
+
+    My first commit

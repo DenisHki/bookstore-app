@@ -4,26 +4,20 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 @Entity
 public class Category {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long categoryid;
-	private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long categoryid; 
+    private String name;
+    
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
+    private List<Book> books;
 
-	@JsonIgnore
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
-	private List<Book> book;
-
-	public Category() {
-	}
+    public Category() {}
 
 	public Category(String name) {
 		super();
@@ -34,7 +28,7 @@ public class Category {
 		return categoryid;
 	}
 
-	public void setCategoryid(Long categoryid) {
+	public void setCategoryId(Long categoryid) {
 		this.categoryid = categoryid;
 	}
 
@@ -46,19 +40,17 @@ public class Category {
 		this.name = name;
 	}
 
-	public List<Book> getBook() {
-		return book;
+	public List<Book> getBooks() {
+		return books;
 	}
 
-	public void setBook(List<Book> book) {
-		this.book = book;
+	public void setBooks(List<Book> books) {
+		this.books = books;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Category [categoryid=" + categoryid + ", name=" + name + "]";
 	}
 	
-	
-
 }

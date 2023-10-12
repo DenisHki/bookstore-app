@@ -30,6 +30,14 @@ public class BookstoreRepositoryTest {
 		assertThat(books).hasSize(1);
 		assertThat(books.get(0).getTitle()).isEqualTo("The Lord of the Rings");
 	}
+	
+	@Test
+    public void findByTitleShouldReturnBook() {
+        List<Book> books = repository.findByTitle("A Game of Thrones");
+        
+        assertThat(books).hasSize(1);
+        assertThat(books.get(0).getAuthor()).isEqualTo("George R. R. Martin");
+    }
 
 	@Test
 	public void createNewBook() {
